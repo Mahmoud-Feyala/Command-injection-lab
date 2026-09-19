@@ -1,0 +1,8 @@
+2026-09-14 09:12:01 INFO  user login success user=mahmoud
+2026-09-14 09:14:22 ERROR failed to connect to database
+2026-09-14 09:15:03 INFO  user logout user=mahmoud
+2026-09-14 09:20:44 WARN  disk usage above 80%
+2026-09-14 09:22:10 ERROR failed to connect to database
+2026-09-14 09:25:33 INFO  user login success user=admin
+2026-09-14 09:30:01 ERROR permission denied on /var/data
+2026-09-14 09:31:15 INFO  scheduled backup completed

@@ -1,0 +1,14 @@
+{
+  "name": "cmd-inj-lab",
+  "version": "1.0.0",
+  "description": "معمل تعليمي: تطبيق مصاب بـ Command Injection وإصلاحه",
+  "main": "server-vulnerable.js",
+  "type": "commonjs",
+  "scripts": {
+    "vulnerable": "node server-vulnerable.js",
+    "fixed": "node server-fixed.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
