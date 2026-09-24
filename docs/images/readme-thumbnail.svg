@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Critical log search fix thumbnail</title>
+  <desc id="desc">Dark terminal-themed thumbnail showing vulnerable and fixed log search states.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#07141d"/>
+      <stop offset="50%" stop-color="#091a24"/>
+      <stop offset="100%" stop-color="#050b12"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ffef9a"/>
+      <stop offset="40%" stop-color="#f7c35f"/>
+      <stop offset="100%" stop-color="#f3a90d"/>
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#7ef2c8"/>
+      <stop offset="100%" stop-color="#40e7a6"/>
+    </linearGradient>
+    <filter id="glowGold" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowGreen" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title { font: 900 104px 'Segoe UI', Arial, sans-serif; fill: url(#gold); letter-spacing: 2px; }
+      .subtitle { font: 800 52px 'Segoe UI', Arial, sans-serif; fill: #e8f1f5; }
+      .panelTitle { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #edf7ff; }
+      .code { font: 26px 'Consolas', 'Courier New', monospace; fill: #d7f9ff; }
+      .soft { fill: #8fa9b3; }
+      .muted { fill: #4d6a78; }
+      .line { stroke: rgba(255,255,255,0.15); stroke-width: 2; }
+      .screen { fill: rgba(10,18,25,0.92); stroke: rgba(208,221,230,0.2); stroke-width: 2; }
+      .danger { fill: rgba(255, 55, 55, 0.1); }
+      .safe { fill: rgba(77, 255, 158, 0.08); }
+      .input { fill: rgba(12, 20, 28, 0.8); stroke: rgba(150, 177, 190, 0.2); }
+      .indicator { fill: #ff3e3e; }
+      .ok { fill: #53ff88; }
+      .warning { fill: #f2cb4a; }
+      .shield { fill: rgba(118,255,200,0.12); stroke: rgba(118,255,200,0.7); stroke-width: 3; }
+      .dangerLine { stroke: #ff5b5b; stroke-width: 6; stroke-linecap: round; }
+      .safeLine { stroke: #4fe7b4; stroke-width: 6; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.14">
+    <g fill="#a7d7ff" font-family="Consolas, monospace" font-size="18">
+      <text x="50" y="110">1</text>
+      <text x="50" y="170">2</text>
+      <text x="50" y="230">3</text>
+      <text x="50" y="290">4</text>
+      <text x="50" y="350">5</text>
+      <text x="50" y="410">6</text>
+      <text x="50" y="470">7</text>
+    </g>
+    <g fill="#b7d4df" opacity="0.5" font-family="Consolas, monospace" font-size="18">
+      <text x="85" y="120">console.log</text>
+      <text x="85" y="180">const path =</text>
+      <text x="85" y="240">npm run fixed</text>
+      <text x="85" y="300">grep -i</text>
+      <text x="85" y="360">if (term)</text>
+      <text x="85" y="420">validate</text>
+      <text x="85" y="480">return</text>
+    </g>
+  </g>
+
+  <text x="800" y="120" text-anchor="middle" class="title" filter="url(#glowGold)">CRITICAL LOG SEARCH FIX:</text>
+  <text x="800" y="230" text-anchor="middle" class="title" filter="url(#glowGold)">VULNERABILITY SECURED!</text>
+
+  <text x="400" y="330" text-anchor="middle" class="subtitle">UNSAFE STATE (BEFORE)</text>
+  <text x="1200" y="330" text-anchor="middle" class="subtitle">SECURE STATE (AFTER)</text>
+
+  <g>
+    <rect x="120" y="370" width="620" height="370" rx="14" class="screen"/>
+    <rect x="860" y="370" width="620" height="370" rx="14" class="screen"/>
+
+    <rect x="145" y="390" width="180" height="28" rx="10" fill="rgba(10,20,30,0.7)"/>
+    <circle cx="170" cy="404" r="6" fill="#ff534d"/>
+    <circle cx="192" cy="404" r="6" fill="#ffbe2f"/>
+    <circle cx="214" cy="404" r="6" fill="#2ee65e"/>
+    <text x="245" y="412" class="code soft">vulnerable.log</text>
+    <circle cx="700" cy="404" r="7" class="indicator"/>
+    <text x="720" y="412" class="code soft">no validation</text>
+
+    <g transform="translate(145,440)">
+      <text class="code" x="0" y="0">Searches</text>
+      <text class="code" x="120" y="0" fill="#89f4da">server.log</text>
+      <text class="code" x="284" y="0" fill="#dbe7ee">on the backend via</text>
+      <text class="code" x="500" y="0" fill="#f6e597">grep</text>
+      <text class="code" x="562" y="0" fill="#dbe7ee">. Type a term below, or try one of these</text>
+      <text class="code" x="0" y="42">against it:</text>
+      <text class="code" x="0" y="76" fill="#fca9a9">ERROR</text>
+      <text class="code" x="120" y="76" fill="#dbe7ee">;whoami</text>
+      <text class="code" x="245" y="76" fill="#dbe7ee">|whoami</text>
+    </g>
+
+    <rect x="145" y="590" width="540" height="110" rx="10" class="input"/>
+    <text x="165" y="645" class="code soft">ERROR;whoami</text>
+
+    <path d="M 480 520 L 900 520" class="dangerLine" stroke-dasharray="14 14"/>
+    <g transform="translate(555,455)">
+      <g filter="url(#glowGreen)">
+        <path d="M 0 85 L 105 85 L 195 85" class="safeLine" stroke-dasharray="10 12" fill="none"/>
+        <g transform="translate(0,0)">
+          <rect x="0" y="50" width="70" height="70" rx="18" class="shield"/>
+          <path d="M 35 62 L 53 80 L 60 72" fill="none" stroke="#9ef6d1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g transform="translate(180,0)">
+          <rect x="0" y="50" width="70" height="70" rx="18" class="shield"/>
+          <path d="M 15 75 L 30 60 L 45 75 L 60 60" fill="none" stroke="#9ef6d1" stroke-width="5" stroke-linecap="round"/>
+        </g>
+      </g>
+    </g>
+
+    <rect x="880" y="390" width="180" height="28" rx="10" fill="rgba(10,20,30,0.7)"/>
+    <circle cx="905" cy="404" r="6" fill="#ff534d"/>
+    <circle cx="927" cy="404" r="6" fill="#ffbe2f"/>
+    <circle cx="949" cy="404" r="6" fill="#2ee65e"/>
+    <text x="975" y="412" class="code soft">fixed.log</text>
+    <circle cx="1410" cy="404" r="7" class="ok"/>
+    <text x="1430" y="412" class="code soft">validated</text>
+
+    <g transform="translate(880,440)">
+      <text class="code" x="0" y="0">Searches</text>
+      <text class="code" x="120" y="0" fill="#89f4da">server.log</text>
+      <text class="code" x="284" y="0" fill="#dbe7ee">on the backend via</text>
+      <text class="code" x="500" y="0" fill="#7ef2c8">grep</text>
+      <text class="code" x="562" y="0" fill="#dbe7ee">. Type a term below, or try one of these</text>
+      <text class="code" x="0" y="42">against it:</text>
+      <text class="code" x="0" y="76" fill="#c8f7eb">ERROR</text>
+      <text class="code" x="120" y="76" fill="#dbe7ee">;whoami</text>
+      <text class="code" x="245" y="76" fill="#dbe7ee">|whoami</text>
+    </g>
+
+    <rect x="880" y="590" width="540" height="110" rx="10" class="input"/>
+    <text x="900" y="645" class="code soft">ERROR;whoami</text>
+
+    <g opacity="0.9">
+      <path d="M 880 650 L 1050 650" class="safeLine" stroke-dasharray="10 14" fill="none"/>
+      <path d="M 932 625 L 980 625" class="safeLine" fill="none"/>
+      <path d="M 980 625 L 1080 625" class="safeLine" fill="none"/>
+      <path d="M 1080 625 L 1180 625" class="safeLine" fill="none"/>
+    </g>
+  </g>
+
+  <text x="800" y="840" text-anchor="middle" font-size="38" fill="#e3edf2" font-family="Segoe UI, Arial, sans-serif" font-weight="700">From Risk to Validation</text>
+</svg>

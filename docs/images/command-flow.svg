@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Command injection lab request flow</title>
+  <desc id="desc">A browser sends a search term to two Express servers. The vulnerable model builds a shell command while the fixed model reads the log file directly.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#101417"/><stop offset="1" stop-color="#1c2525"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#8c9b96"/></marker>
+  </defs>
+  <rect width="1200" height="500" rx="24" fill="url(#bg)"/>
+  <text x="60" y="65" fill="#eef2ed" font-family="Arial, sans-serif" font-size="28" font-weight="700">Command Injection Lab · Request Flow</text>
+  <text x="60" y="98" fill="#9aa9a4" font-family="Arial, sans-serif" font-size="17">A search box becomes a shell boundary in one mode and stays data in the other.</text>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <rect x="70" y="190" width="220" height="145" rx="14" fill="#12191c" stroke="#d9843c" stroke-width="2"/><text x="180" y="238" fill="#eef2ed" font-size="21" font-weight="700">Browser UI</text><text x="180" y="270" fill="#b9c4be" font-size="16">GET /search?term=...</text><text x="180" y="298" fill="#87958f" font-size="15">User-controlled input</text>
+    <rect x="350" y="190" width="220" height="145" rx="14" fill="#12191c" stroke="#8b9b96" stroke-width="2"/><text x="460" y="238" fill="#eef2ed" font-size="21" font-weight="700">Express API</text><text x="460" y="270" fill="#b9c4be" font-size="16">GET /search</text><text x="460" y="298" fill="#87958f" font-size="15">Routes the search term</text>
+    <rect x="635" y="125" width="245" height="110" rx="14" fill="#351d1a" stroke="#d85d4e" stroke-width="2"/><text x="757" y="170" fill="#ffe0d8" font-size="20" font-weight="700">Vulnerable model</text><text x="757" y="201" fill="#f5aaa0" font-size="15">exec(shell command + term)</text>
+    <rect x="635" y="285" width="245" height="110" rx="14" fill="#12302e" stroke="#3ea6a0" stroke-width="2"/><text x="757" y="330" fill="#d7fffa" font-size="20" font-weight="700">Fixed model</text><text x="757" y="361" fill="#9ddbd4" font-size="15">Read file + filter as data</text>
+    <rect x="950" y="190" width="180" height="145" rx="14" fill="#12191c" stroke="#d1b56b" stroke-width="2"/><text x="1040" y="238" fill="#eef2ed" font-size="21" font-weight="700">server.log</text><text x="1040" y="270" fill="#b9c4be" font-size="16">Searchable log</text><text x="1040" y="298" fill="#87958f" font-size="15">Plain text output</text>
+  </g>
+  <path d="M290 262 H350" stroke="#8c9b96" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M570 245 C600 215 605 190 635 180" fill="none" stroke="#d85d4e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M570 280 C600 310 605 335 635 340" fill="none" stroke="#3ea6a0" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M880 180 C915 205 920 225 950 245" fill="none" stroke="#d85d4e" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M880 340 C915 315 920 295 950 275" fill="none" stroke="#3ea6a0" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="600" y="445" fill="#b9c4be" font-family="Arial, sans-serif" font-size="16">Use the vulnerable port only on an isolated local machine.</text>
+</svg>
