@@ -1,7 +1,7 @@
 # Command Injection Security Lab
 
 <p align="center">
-  <img src="docs/images/readme-thumbnail.svg" alt="Critical log search fix thumbnail" width="1200" />
+  <img src="public/example.jpg" alt="Critical log search fix thumbnail" width="1200" />
 </p>
 
 ![Command injection request flow](docs/images/command-flow.svg)
